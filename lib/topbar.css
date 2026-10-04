@@ -1,0 +1,51 @@
+.top-bar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.lang-group {
+    --bs-border-width: 2px;
+}
+
+.lang-group .btn {
+    --bs-btn-border-width: 2px;
+    --bs-btn-padding-y: 0;
+    --bs-btn-padding-x: 0.85rem;
+    --bs-btn-font-size: 0.8rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.lang-group .btn-outline-primary {
+    background-color: #fff;
+}
+
+.lang-group .btn-outline-primary:hover {
+    background-color: #e8f0ff;
+    color: var(--bs-primary);
+}
+
+.lang-group>.btn:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.lang-group>.btn:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.help-btn {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-width: 2px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}

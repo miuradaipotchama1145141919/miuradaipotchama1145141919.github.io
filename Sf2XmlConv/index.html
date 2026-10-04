@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sf2XmlConv</title>
+    <link href="../lib/bootstrap.min.css" rel="stylesheet">
+    <link href="../lib/topbar.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header id="top-bar"></header>
+
+    <main class="container-lg flex-grow-1 d-flex align-items-center py-4">
+        <section class="converter">
+            <h1 class="converter-title" data-i18n="title">.SF2 to Domino Module File Converter</h1>
+
+            <ol class="steps list-unstyled mb-0">
+                <li class="step">
+                    <label class="step-label" for="baseFile">
+                        <span class="step-num">1</span>
+                        <span data-i18n="step1">Select a base Domino module file (e.g. GM2, GS, XG template)</span>
+                    </label>
+                    <input class="step-input" type="file" id="baseFile" accept=".xml,.dml,text/xml">
+                </li>
+                <li class="step">
+                    <label class="step-label" for="sf2File">
+                        <span class="step-num">2</span>
+                        <span data-i18n="step2">Select a SoundFont2 (.sf2) file</span>
+                    </label>
+                    <input class="step-input" type="file" id="sf2File" accept=".sf2,.SF2">
+                </li>
+                <li class="step">
+                    <div class="step-label">
+                        <span class="step-num">3</span>
+                        <span data-i18n="step3">Convert and download the module file</span>
+                    </div>
+                    <div class="step-input form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="reuseNames">
+                        <label class="form-check-label" for="reuseNames" data-i18n="reuseNames"></label>
+                    </div>
+                    <div class="step-input">
+                        <button type="button" id="convertBtn" class="btn btn-primary rounded-pill px-4"
+                            data-i18n="convert">Convert</button>
+                    </div>
+                    <div id="status" class="step-input mt-3" role="status"></div>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="../lib/topbar.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
