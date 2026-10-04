@@ -163,7 +163,7 @@ const Domino = (function () {
 
     function updateModuleTag(text, moduleName) {
         return text.replace(/<ModuleData\b[^>]*>/i, function (tag) {
-            return writeTag(writeTag(tag, 'Name', escapeName(moduleName)), 'FileCreator', withCreatorTag(readTag(tag, 'FileCreator')));
+            return writeTag(writeTag(writeTag(tag, 'Name', escapeName(moduleName)), 'Folder', 'SoundFont'), 'FileCreator', withCreatorTag(readTag(tag, 'FileCreator')));
         });
     }
 
